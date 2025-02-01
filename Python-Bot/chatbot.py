@@ -10,7 +10,7 @@ from textblob import TextBlob
 from datetime import datetime
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('C:/Users/KIIT/OneDrive/Desktop/ChatbotPart_HarmioniAI/Python-Chatbot/intents.json').read())
+intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbot_model.h5')
