@@ -9,6 +9,27 @@ from keras.models import load_model
 from textblob import TextBlob
 from datetime import datetime
 
+# Download necessary NLTK resources if not already downloaded
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
+try:
+    nltk.data.find('corpora/wordnet')
+except LookupError:
+    nltk.download('wordnet')  # For lemmatization
+
+try:
+    nltk.data.find('corpora/omw-1.4')
+except LookupError:
+    nltk.download('omw-1.4')
+
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    nltk.download('punkt_tab')  # Download the punkt_tab resource
+
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('Python-Bot/intents.json').read())
 words = pickle.load(open('words.pkl', 'rb'))
