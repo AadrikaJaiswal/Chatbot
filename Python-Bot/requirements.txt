@@ -2,3 +2,7 @@ tensorflow
 keras
 nltk
 textblob
+nltk_data punkt
+nltk_data wordnet
+nltk_data omw-1.4
+nltk_data punkt_tab
