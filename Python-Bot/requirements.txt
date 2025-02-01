@@ -1,2 +1,4 @@
-nltk
+tensorflow
 keras
+nltk
+textblob
